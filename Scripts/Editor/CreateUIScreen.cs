@@ -39,7 +39,7 @@ public class CreateUIScreen
         CreateSplashScreen(canvasGO.transform);
 
         // EventSystem (if not already in scene)
-        if (!Object.FindObjectOfType<UnityEngine.EventSystems.EventSystem>())
+        if (!Object.FindAnyObjectByType<UnityEngine.EventSystems.EventSystem>())
         {
             GameObject es = new GameObject("EventSystem");
             es.transform.SetParent(root.transform, false);
